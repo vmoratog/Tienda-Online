@@ -1,0 +1,48 @@
+/*
+:host {
+  margin: 2px;
+  border: 1px solid black;
+  border-radius: 5px;
+  display: block;
+}
+*/
+.crop-image { /*Para que las imagenes queden homogeneas con la misma altura*/
+  height: 300px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    max-width: 100%;
+  }
+}
+
+/*
+Esta puede ser otra forma 
+.crop-image {
+  display: block;
+  height: 300px;
+  width: 100%;
+  img {
+    object-fit: contain;
+    height: 100%;
+    width: 100%;
+    object-position: center;
+  }
+}
+*/
+mat-card {
+//  border: 1px solid gray;
+}
+
+mat-card-title, mat-card-subtitle {
+  text-align: center;
+}
+
+mat-card-actions {
+  display: flex;
+  justify-content: center;
+}

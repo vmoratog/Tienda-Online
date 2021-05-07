@@ -1,0 +1,15 @@
+<mat-card>
+  <div class="crop-image">
+    <img [src]="product.image" alt="">
+  </div>
+  <mat-card-content>
+    <mat-card-title>{{ product.title | uppercase}}</mat-card-title>
+    <mat-card-subtitle>{{ product.price | currency }}</mat-card-subtitle>
+  </mat-card-content>
+  <mat-card-actions>
+    <button
+      mat-raised-button
+      [routerLink]="['/products', product.id]"
+      color="primary">Comprar</button>
+  </mat-card-actions>
+</mat-card>

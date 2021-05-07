@@ -1,0 +1,102 @@
+<div class="container content">
+  <div class="row">
+    <div class="col-xs-12 col-md-6">
+      <div class="box left-box">
+        <div class="row">
+          <div class="col-xs">
+            <div class="box">
+              <h1>Contacto</h1>
+              <p>
+                There are many variations of passages of Lorem Ipsum available, but the majority have suffered
+                alteration in some form, by injected humour, or randomised words which don't look even slightly
+                believable. If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything
+                embarrassing hidden in the middle of text.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row bottom-xs">
+          <div class="col-xs">
+            <div class="box">
+              <h2>Si tienes alguna duda contactanos</h2>
+              <p>
+                "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco"
+              </p>
+              <div class="contact-info">
+                <mat-icon>room
+                </mat-icon>
+                <span> Dirección:</span>
+                <p>Lorem ipsum dolor sit amet</p>
+              </div>
+              <div class="contact-info">
+                <mat-icon>mark_as_unread</mat-icon>
+                <span> Email:</span>
+                <p>lorem@ipsum.com</p>
+              </div>
+              <div class="contact-info">
+                <mat-icon>settings_phone</mat-icon>
+                <span> Telefono:</span>
+                <p>(123) 456 7890</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <div class="col-xs-12 col-md-6">
+      <div class="box right-box">
+        <div class="row">
+          <div class="col-xs">
+            <div class="box">
+              <img src="./../../../../assets//images/contact.jpg" alt="imagen-contacto">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-xs">
+            <div class="box">
+              <form class="example-form">
+                <mat-form-field color="accent" class="example-full-width">
+                  <mat-label>Nombre</mat-label>
+                  <input matInput placeholder="Nombre" value="Nombre">
+                </mat-form-field>
+                <mat-form-field class="example-full-width">
+                  <mat-label>Asunto</mat-label>
+                  <input matInput placeholder="Asunto" value="Asunto">
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Email</mat-label>
+                  <input type="email" matInput [formControl]="emailFormControl" [errorStateMatcher]="matcher"
+                    placeholder="Ex. pat@example.com">
+                  <mat-hint>Errors appear instantly!</mat-hint>
+                  <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                  </mat-error>
+                  <mat-error *ngIf="emailFormControl.hasError('required')">
+                    Email is <strong>required</strong>
+                  </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="example-full-width">
+                  <mat-label>Deja un comentario</mat-label>
+                  <textarea matInput placeholder="Deja un comentario"></textarea>
+                </mat-form-field>
+              </form>
+              <button mat-raised-button color="primary">Enviar</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- <mat-form-field color="accent" class="full-width">
+                <input [formControl]="emailInput" matInput placeholder="Su correo" type="email">
+              </mat-form-field>
+              <button (click)="registerMail()" [disabled]="emailInput.invalid" mat-raised-button color="accent">Suscribirse</button> -->
+      </div>
+    </div>
+  </div>
+</div>
