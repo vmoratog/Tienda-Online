@@ -26,10 +26,8 @@ export class CatalogProductDetailComponent implements OnInit {
   }
 
   fetchProduct(id: string) {
-    this.productsService.getProduct(id)
-      .subscribe(product => {
-        this.product = product
-      })
+    const product = this.productsService.getProduct(id)
+    if (product) this.product = product
   }
 
 }

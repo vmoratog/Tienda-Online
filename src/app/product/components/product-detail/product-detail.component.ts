@@ -26,7 +26,7 @@ export class ProductDetailComponent implements OnInit {
   }
 
   fetchProduct(id: string) {
-    this.productsService.getProduct(id)
+    this.productsService.getProductPlatzi(id)
       .subscribe(product => {
         this.product = product
       })

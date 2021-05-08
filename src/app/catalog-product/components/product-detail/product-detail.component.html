@@ -1,10 +1,17 @@
-<div>
-  <img [src]="product?.image" alt="">
-</div>
-<div>
-  <ul>
-    <li>Nombre: {{ product?.title }}</li>
-    <li>Precio: {{ product?.price | currency}}</li>
-  </ul>
-  <p>{{ product?.description }}</p>
+<div class="content-detaills">
+  <div class="img-wrapper">
+    <img [src]="product?.image" alt="">
+  </div>
+  <div class="description-detail">
+    <ul>
+      <li><strong>Nombre:</strong> {{ product?.title }}</li>
+      <li><strong>Precio:</strong> {{ product?.price | currency}}</li>
+      <li><strong>Cantidad:</strong> {{ product?.quantity}}</li>
+    </ul>
+    <button
+      mat-raised-button
+      color="primary">
+      Pagar
+    </button>
+  </div>
 </div>
